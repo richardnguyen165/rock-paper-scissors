@@ -1,0 +1,39 @@
+LET continueGame store true
+
+WHILE continueGame is true 
+  LET userInput store user prompt
+  LOWERCASE userInput
+  TRIM userInput
+
+  IF userInput equal to 'rock'
+    computerMove('rock')
+  ELSE IF userInput equal to 'paper'
+    computerMove('paper')
+  ELSE IF userInput equal to 'scissors'
+    computerMove('scissors')
+  ELSE
+    output 'INVALID MOVE'
+END WHILE LOOP
+
+
+PROCEDURE computerMove(playerMove)
+  LET randomNumber be Math.floor(Math.randomNumber() * 3)
+  LER computerMove
+
+  IF randomNumber equal to 0
+    computerMove = 'rock'
+  ELSE IF randomNumber equal to 1
+    computerMove = 'paper'
+  ELSE
+    computerMove = 'scissors'
+  
+  IF playerMove === computerMove
+    OUTPUT "TIE."
+  ELSE IF (playerMove === 'rock' and computerMove === 'scissors") OR (playerMove === 'scissors' and computerMove === 'paper')
+  OR (playerMove === 'paper' and and computerMove === 'rock")
+    OUTPUT "WIN."
+  ELSE
+    OUTPUT "LOSE."
+  
+  RETURN
+END PROCEDURE
