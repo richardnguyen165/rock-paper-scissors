@@ -30,7 +30,7 @@ buttonContainerReference.addEventListener('click', (event) => {
 })
 
 function getComputerChoice(){
-  const randomNumber = Math.random() * 3;
+  const randomNumber = Math.random();
   let computerChoice;
 
   if (0 <= randomNumber && randomNumber < 1/3){
